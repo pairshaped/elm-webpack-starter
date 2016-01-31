@@ -1,6 +1,11 @@
 module Hello.World (..) where
 
+import Html exposing (..)
+import Html.Attributes exposing (..)
 
-hello : String
-hello =
-  "Hello, World!"
+
+view : Html
+view =
+  p
+    [ class "Hello__World" ]
+    [ text "Hello, World!" ]

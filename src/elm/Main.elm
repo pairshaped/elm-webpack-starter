@@ -2,7 +2,7 @@ module Main (..) where
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Hello.World exposing (hello)
+import Hello.World
 
 
 main : Html
@@ -11,5 +11,5 @@ main =
     [ class "row" ]
     [ div
         [ class "col-xs-12" ]
-        [ text hello ]
+        [ Hello.World.view ]
     ]
