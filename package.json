@@ -1,0 +1,21 @@
+{
+  "name": "elm-webpack-starter",
+  "version": "0.0.1",
+  "description": "Elm and Webpack Starter Kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pairshaped/elm-webpack-starter"
+  },
+  "author": "Pair Shaped Inc.",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "start": "webpack-dev-server --port 3000 --inline --host 0.0.0.0",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "elm-webpack-loader": "^2.0.0",
+    "file-loader": "^0.8.5",
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
