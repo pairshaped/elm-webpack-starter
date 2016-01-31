@@ -1,34 +1,40 @@
+var path = require('path')
+
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/index.js'
+  ],
 
   output: {
-    path: './dist',
-    filename: 'index.js'
-  },
-
-  resolve: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js', '.elm']
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
 
   module: {
     loaders: [
       {
-        test: /\.html$/,
-        exclude: /node_modules/,
-        loader: 'file?name=[name].[ext]'
+        test: /\.elm$/,
+        include: path.join(__dirname, 'src', 'elm'),
+        loader: 'elm-webpack-loader'
       },
       {
-        test: /\.elm$/,
-        exclude: [/elm-stuff/, /node_modules/],
-        loader: 'elm-webpack-loader'
+        test: /\.styl$/,
+        include: path.join(__dirname, 'src', 'style'),
+        loader: 'style-loader!css-loader!stylus-loader'
       }
     ],
 
     noParse: /\.elm$/
   },
 
+  resolve: {
+    extensions: ['', '.js', '.elm', '.styl']
+  },
+
   devServer: {
+    contentBase: './',
+    progress: true,
     stats: 'errors-only'
   }
 };

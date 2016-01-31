@@ -1,6 +1,7 @@
 'use strict'
 
-require('./index.html')
-var Elm = require('./Main')
+require('./styles/Main')
+
+var Elm = require('./elm/Main')
 
 Elm.embed(Elm.Main, document.getElementById('main'))
