@@ -2,12 +2,12 @@
 
 ## Prerequisites
 
-1. Node & NPM (recommend using Node Version Manager https://github.com/creationix/nvm)
+Install Node & NPM (recommend using Node Version Manager https://github.com/creationix/nvm)
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 ```
 
-2. Elm
+Install Elm
 ```
 npm install -g elm
 ```
