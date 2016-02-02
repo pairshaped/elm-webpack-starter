@@ -1,15 +1,17 @@
 module Main (..) where
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Hello.World
+import Html exposing (Html, div, text)
+import Html.Attributes exposing (class)
 
 
 main : Html
 main =
   div
-    [ class "row" ]
+    [ class "container" ]
     [ div
-        [ class "col-xs-12" ]
-        [ Hello.World.view ]
+        [ class "row" ]
+        [ div
+            [ class "col-xs-12" ]
+            [ text "Elm Starter" ]
+        ]
     ]
